@@ -17,9 +17,9 @@ if not ret:
 
 height, width = frame.shape[:2]
 
-succes, encoded = cv2.imencode(".jpg", frame)
+success, encoded = cv2.imencode(".jpg", frame)
 
-if not succes:
+if not success:
     print("Gagal melakuakn JPEG encoding")
 else:
     print("JPEG encoding berhasil")
