@@ -11,7 +11,7 @@ if not camera.isOpened():
 ret, frame = camera.read()
 
 if not ret:
-    print("Gagal membaca fream")
+    print("Gagal membaca frame")
     camera.release()
     sys.exit()
 
@@ -20,7 +20,7 @@ height, width = frame.shape[:2]
 success, encoded = cv2.imencode(".jpg", frame)
 
 if not success:
-    print("Gagal melakuakn JPEG encoding")
+    print("Gagal melakukan JPEG encoding")
 else:
     print("JPEG encoding berhasil")
     print(f"Size JPEG: {len(encoded)} bytes")
