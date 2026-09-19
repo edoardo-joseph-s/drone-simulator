@@ -10,6 +10,8 @@ if not camera.isOpened():
 
 ret, frame = camera.read()
 
+height, width = frame.shape[:2]
+
 if not ret:
     print("Gagal membaca fream")
     camera.release()
@@ -22,5 +24,6 @@ if not succes:
 else:
     print("JPEG encoding berhasil")
     print(f"Size JPEG: {len(encoded)} bytes")
+    print(f"Resolution: {width}x{height}")
 
 camera.release()
