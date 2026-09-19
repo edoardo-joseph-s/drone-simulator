@@ -10,12 +10,12 @@ if not camera.isOpened():
 
 ret, frame = camera.read()
 
-height, width = frame.shape[:2]
-
 if not ret:
     print("Gagal membaca fream")
     camera.release()
     sys.exit()
+
+height, width = frame.shape[:2]
 
 succes, encoded = cv2.imencode(".jpg", frame)
 
