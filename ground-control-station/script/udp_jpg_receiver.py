@@ -1,7 +1,7 @@
 import socket
 import struct
 
-host = "10.41.0.1"
+host = "10.42.0.1"
 port = 5001
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
