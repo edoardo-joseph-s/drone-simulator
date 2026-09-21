@@ -10,7 +10,7 @@ gcs_port = 5001
 chunk_size = 1200
 
 # open camera
-camera = cv2.VideoCapture(0)
+camera = cv2.VideoCapture(1)
 
 if not camera.isOpened():
     print("Gagal membuka camera")
