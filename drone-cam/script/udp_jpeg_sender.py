@@ -18,6 +18,7 @@ if not camera.isOpened():
 print("Camera berhasil dibuka")
 
 # capture one frame
+# take a picture
 ret, frame = camera.read()
 
 if not ret:
@@ -28,6 +29,14 @@ if not ret:
 height, width = frame.shape[:2]
 
 print(f"Resulution: {width}x{height}")
+
+# preview capture frame before send to udp
+cv2.imshow("Preview", frame)
+
+print("Tekan tombol apa saja pada window preview untuk melanjutkan...")
+
+cv2.waitKey(0)  # press any bottom to continue
+cv2.destroyAllWindows()
 
 # jpeg encoding
 success, encoded = cv2.imencode(".jpeg", frame)
